@@ -1,0 +1,62 @@
+body{
+    background-color: #222;
+}
+.btn-play{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: none; 
+    background-color: transparent;
+}
+.btn-play i{
+    color: #6699ff;
+    position: relative;
+    left: 1px;  /* HW* transorm-Translate*/
+}
+.btn-play .l-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-image: radial-gradient(#7575a3, #3d3d5c);
+}
+.btn-play .l-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-image: radial-gradient(#732673 60%, transparent 63%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.btn-play .l-3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-image: radial-gradient(circle at top left, 
+    rgba(255, 255, 255, 0.431) 45%,
+    rgba(255, 255, 255, 0.494) 50%, 
+    rgba(0, 0, 0, 0.822) 100%);
+}
+.btn-play:hover .l-3{
+    background-image: 
+            radial-gradient(circle at top left, 
+              rgba(255, 255, 255, 0.431) 55%,
+              rgba(255, 255, 255, 0.494) 60%, 
+              rgba(0, 0, 0, 0.822) 100%);  
+}
