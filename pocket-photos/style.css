@@ -1,0 +1,74 @@
+/*
+-position: absolute, relative
+-flow
+-color palettes: design
+
+*/
+.pal{
+    color: #8A97BF;
+    color: #C9D3F2;
+    color: #364259;
+    color: #A7B8D9;
+    color: #0D0D0D;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+
+    background-image: 
+       linear-gradient(#8A97BF, #C9D3F2);
+    
+}
+.pocket{
+    position: absolute;
+    left: 15%;
+    bottom: 15%;
+
+    width: 40%;
+    height: 40%;
+
+    background-image: 
+       linear-gradient(45deg, #0D0D0D 49%, transparent 51%);
+    box-shadow: -7px 7px 4px 2px #0D0D0D;
+
+    border: 2px dashed #364259;
+    border-top: none;
+    border-right: none;
+}
+.pocket img{
+    /*opacity: 0.5;*/
+    width: 110%;
+    position: absolute;
+    
+    left: 5%;
+    bottom: 5%;
+    /*NEW*/
+    transform-origin: left bottom;
+
+    border: 10px solid #A7B8D9;
+    box-shadow: 0 0 3px 3px #8A97BF;
+}
+.pocket img:nth-child(1){
+    transform: rotate(-3.5deg);
+}
+.pocket img:nth-child(3){
+    transform: rotate(3.5deg);
+}
+.pocket .top{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 50%;
+    height: 50%;
+
+    background-image: 
+       linear-gradient(45deg, #0D0D0D 48%, transparent 52%);
+    box-shadow: -7px 7px 4px 2px #0D0D0D;
+
+    border: 2px dashed #364259;
+    border-top: none;
+    border-right: none;
+}
