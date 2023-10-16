@@ -1,0 +1,126 @@
+body{
+    font-family: "Martin Mono", monospace;
+    background-color: #222;
+    color: white;
+    margin: 0;
+}
+.banner{
+    border: 0.1px solid transparent;
+    height: 100vh;   
+}
+.banner::before{
+    /*inline*/
+    content: "";
+    display: block;
+    background-color: #222222bd;
+    position: absolute;
+    top: 37vh;
+    left: 18vw;
+    right: 50vw;
+    bottom: 30vh;
+    box-shadow: 0 0 8px 0px #ffa50070;
+
+}
+.banner h1{
+    margin-top: 40vh;
+    font-size: 7vh;
+    font-weight: 800;
+}
+.banner h2 span{
+    color: orange;
+}
+.banner h2{
+    color: rgb(114, 114, 114);
+    font-size: 3.5vh;
+}
+.banner p{
+    color: rgba(245, 245, 245, 0.692);
+}
+
+.banner h1,
+.banner h2,
+.banner p{
+    line-height: 3vh;
+    margin-left: 20vw;
+    position: relative;
+    z-index: 1;
+}
+.banner .pictures{
+    /*border: 5px solid green;*/
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: -1;
+    text-align: center;
+}
+
+@keyframes fadeInOut {
+     from{opacity: 1;}
+     to{opacity: 0.6;}
+}
+    
+
+.banner .pictures img{
+    /*NEW*/
+    object-fit: cover;
+    margin-bottom: 1vh;
+    animation: fadeInOut 5s infinite alternate linear;
+}
+.banner .pictures img:nth-child(1){
+    width: 23vw;
+    height: 50vh;
+    animation-delay: -1s;
+}
+.banner .pictures img:nth-child(2){
+    width: 40vw;
+    height: 50vh;
+    animation-delay: -2s;
+}
+.banner .pictures img:nth-child(3){
+    width: 32vw;
+    height: 50vh;
+    animation-delay: -3s;
+}
+.banner .pictures img:nth-child(4){
+    width: 30vw;
+    height: 50vh;
+    animation-delay: -4s;
+}
+.banner .pictures img:nth-child(5){
+    width: 20vw;
+    height: 50vh;
+    animation-delay: -5s;
+}
+.banner .pictures img:nth-child(6){
+    width: 45vw;
+    height: 50vh;
+    animation-delay: -6s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+   1         1
+   | \       | \
+   |  \  5s  |  \
+   |   \     |   \
+   |    \    |    \
+   |     \-0 |     \-0
+x--s-----end--------s-----------end->
+   ^      ^
+  from    to
+*/
