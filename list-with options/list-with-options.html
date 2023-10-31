@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIST WITH OPTIONS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--
+    HW2: finish the thankyou.html page
+-->
+<form action="thankyou.html">
+
+    <section class="menu">
+        <h1>Food Menu</h1>
+        <ul>
+            <li>
+                <input type="checkbox" name="salad" id="salad">
+                <label for="salad">
+                    <h2>Salad</h2>
+                </label>
+            </li>
+            <li>
+                <input type="checkbox" name="pizza" id="pizza">
+                <label for="pizza">
+                    <h2>Pizza</h2>
+                </label>
+            </li>
+            <li>
+                <input type="checkbox" name="soup" id="soup">
+                <label for="soup">
+                    <h2>Soup</h2>
+                </label>
+            </li>
+            <li>
+                <input type="checkbox" name="moldavian polenta" id="moldavian-polenta">
+                <label for="moldavian-polenta">
+                    <h2>Moldavian<br/>Polenta</h2>
+                </label>
+            </li>
+            <li>
+                <input type="checkbox" name="pie" id="pie">
+                <label for="pie">
+                    <h2>Pie</h2>
+                </label>
+            </li>
+        </ul>
+    </section>
+    
+    <fieldset class="location">
+        <!--
+            HW:3 de asigurat ca fontul sa se aplice 
+            si la elementele active.
+        -->
+        <legend>Deliver to location</legend>
+        <select name="" id="">
+            <option value="-">-- select city --</option>
+            <option value="a">Town A</option>
+            <option value="b">Town B</option>
+            <option value="c">Town C</option>
+        </select>
+        <input type="text" placeholder="street address">
+    </fieldset>
+    <!--
+        HW1: stylize the button
+    -->
+    <button>CONFIRM ORDER</button>
+</form>    
+</body>
+</html>

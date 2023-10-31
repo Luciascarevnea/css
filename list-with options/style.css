@@ -1,0 +1,159 @@
+/* reboot css */
+body{
+    font-family: 'Kalam', cursive;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h1,h2{
+    margin: 0;
+}
+
+/* layout */
+
+.menu h1{
+    font-size: 30px;
+    font-weight: 700; /* > 500 bold*/
+    /*border: 1px solid #999;*/
+    line-height: 30px;
+    padding: 10px 0 8px 0;
+}
+.menu input[type="checkbox"]{
+    display: none;
+}
+.menu label:hover h2{
+    color: #555;
+}
+.menu input:checked + label h2{
+    color: #333;
+}
+.menu h2{
+    font-size: 20px;
+    font-weight: 400;
+    color: #999;
+    /*border: 1px solid #999;*/
+    line-height: 20px;
+    padding: 6px 0 3px 32px;
+    position: relative;
+}
+.menu label{
+    position: relative;
+    cursor: pointer;
+}
+.menu label::before{
+    content: url(icons/circle-outline.svg);
+    filter: contrast(0.5) brightness(200%);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    z-index: 1;
+    top: 2px;
+    left: 1px;
+}
+.menu input:checked + label::before{
+    content: url(icons/check-circle.svg);
+    filter: contrast(1) brightness(100%);
+}
+
+.menu h2::before{
+    content: "";
+    display: block;
+    background-color: green;
+    border-left: 2px solid black;
+    position: absolute;
+    left: 10px;
+    top: -16px;
+    height: 100%;
+}
+.menu h2::after{
+    content: "";
+    display: block;
+    background-color: green;
+    position: absolute;
+    border-top: 2px solid #999;
+    width: 20px;
+    left: 11px;
+    top: 12px;
+}
+
+.menu input:checked + label h2::after{
+    border-color: #333;
+}
+.location{
+    margin-top: 20px;
+}
+.location select{
+    font-family: 'Kalam', cursive;
+    width: 100px;
+}
+.location input{
+    font-family: 'Kalam', cursive;
+    /*parent- 100%/  select- 100px/  inline-spec-16px*/
+    width: calc(100% - 100px   -16px);
+}
+button{
+    margin-top: 20px;
+    font-family: 'Kalam', cursive;
+    font-weight: 600;
+}
+button::after{
+    content: url(icons/arrow-down-bold-circle.svg);
+    line-height: 20px;
+    display: inline-block;
+    width: 25px;
+    vertical-align: middle;
+    padding-left: 5px;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
++---------fieldset-location---------------+
+| | select  | | input                   | |
+| | 100px   | | 63%                     | |
++-----------------------------------------+
+  | px + %
+------------------------------------------> width/horizontal
+
+functia cal()  singura iti calculeaza dimensiunile
+               permite in diferite unitati de masura
+               sa pui formula de calculare automata
+
+*/
+
+
+
+
+
+/*
+
+window
+|
+|
+h2  (relative)
+| 
+|
+|
++----::before (absolute)
+            left, top, height
+
+
+
+*/
