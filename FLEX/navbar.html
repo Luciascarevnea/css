@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NAVBAR WITH FLEX(flexbox)</title>
+    <style>
+        body{
+            background-color: #333;
+            font-family: Arial;
+        }
+        .navbar ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #111;
+
+            /*NEW*/
+            display: flex;
+            justify-content: flex-start;
+            
+        }
+        @media (max-width: 800px){
+            .navbar ul{
+                flex-direction: column;
+            }
+        }
+        .navbar li{
+            border: 1px solid red;
+            padding: 0.5em;
+        }
+        .navbar .lorem{
+            font-size: 30px;
+            margin: 0.5em;
+        }
+        .navbar a{
+            text-decoration: none;
+            color: white;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+
+
+        <!--
+            automat:
+            main:  start
+            cross: strech(se intind pe verticala)
+        -->
+        <!--flex container-->
+        <ul>
+            <!--li- flex item(copii-mostenitorii directi)
+                a- continue sa lucreze in regimul care a fost setat inline           
+            -->
+            <li class="lorem"><a href="">Lorem.</a></li>
+            <li><a href="">Repellendus?</a></li>
+            <li><a href="">Accusantium.</a></li>
+            <li><a href="">Magni.</a></li>
+            <li><a href="">Quod?</a></li>
+            <li><a href="">Optio.</a></li>
+            <li><a href="">Eligendi.</a></li>
+        </ul>
+        <!--flex container/end-->
+
+    </nav>
+    
+</body>
+</html>
+
+
+
+
+<!--
+
+-----------------FLEX CONTAINER-------------------   
+|                         s                      |
+|                         |                      |
+|                         |                      |
+|                         |                      |
+|  s-----------------main axis------------- >e   |
+|                         |                      |
+|                         |                      |
+|                    cross axis                  |
+|                         |                      |
+|                         v                      |
+|                         e                      |
+|                                                |
+-----------------FLEX CONTAINER-------------------
+
+pe verticala se aplica regimul de intindere(strech)
+-->
