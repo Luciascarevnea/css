@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADAPTIVITY</title>
+    <style>
+        
+        .container{
+            width: 80%;
+            margin: 10%;
+            border: 1px solid black;
+        }
+        .container img{
+            width: 100%;
+        }
+        .container h1{
+            text-align: center;
+        }
+           /*NEW AICI SE FACE CONSTRUCTIA DE LA UN ECRAN MIC LA UNUL MARE*/
+        @media (min-width: 1100px){
+             .container{
+                margin: 5%;
+                width: 90%;
+             }
+             .container img{
+                width: 50%;
+                display: inline-block;
+                vertical-align: middle;
+             }
+             .container h1{
+                width: 48%;
+                display: inline-block;
+                vertical-align: middle;
+             }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <img src="https://www.fastcapital360.com/wp-content/uploads/2019/10/39_How-to-Plan-Your-Store-Layout-for-the-Ultimate-Customer-Experience_01.jpg">
+        <h1>ADAPTIVE LAYOUT</h1>
+    </div>
+    
+</body>
+</html>
