@@ -1,0 +1,56 @@
+body{
+    font-family: 'quicksand';
+}
+
+/* ####### Mobile first de preferat in unitatea em  ####### */
+/* BEM COMMON */
+
+.container{
+    /*width: 96%;
+    margin: 0 auto;*/
+    margin: 0.1em;
+}
+img{
+    width: 100%;
+}
+
+
+
+/*BEM COMMPONENTS*/
+.content-main{
+    display: flex;
+    flex-direction: column;
+}
+
+.content-main__header{
+    margin-bottom: 1em;
+}
+
+.content-main__news-wrapper{
+    position: relative;
+}
+
+.content-main__news{
+    margin-top: 1em;
+}
+
+.content-main .news-wrapper__label{
+    background-color: red;
+    padding-right: 1em;
+    position: absolute;
+    top: calc(-0.83em - 1.15em / 2 + 1ex / 2);
+    /*color: #999;*/
+
+    /*
+    1em= 100% M- height(inaltimea lit. mari)
+    1ex= 100% x- height(inaltimea lit. mici)
+    */
+}
+
+.content-main__news-wrapper{
+    border-top: 1px solid #AAA;
+}
+
+.content-main__news-wrapper .content-main__news{
+    margin-top: 2em;
+}
