@@ -1,0 +1,39 @@
+//Modul adaugator din documentatie, contine functii
+//care permit sa lucrezi cu lista
+@use 'sass:list';
+
+// RESET
+body{
+    margin: 0;
+}
+
+// LAYOUT STYLES
+body{
+    background-color: #222;
+}
+
+//COMPONENT STYLES
+//list
+$colors: #6600cc, #009999, #996633;
+//map(permite sa le asociezi fara ordine)
+$sizes: ("lg": 30px, "md": 20px, "sm": 10px);
+
+$n: 1;
+@each $color in $colors{
+    .search .fieldset{
+        &.color-#{$n} {
+            background-color: list.nth($colors, $n);
+        }
+
+    }
+    $n: $n + 1;
+}
+
+@each $key, $value in $sizes{
+    .search .fieldset{
+        &.size-#{$key} {
+            font-size: $value;
+        }
+
+    }
+}
