@@ -1,0 +1,55 @@
+body {
+  background-color: #222;
+}
+
+.ruler {
+  background-color: orange;
+  width: 1200px;
+  height: 100px;
+  border-radius: 10px;
+  border: 5px solid #b37400;
+}
+.ruler .indicator {
+  height: 70px;
+  border-bottom: 5px solid #b37400;
+  position: relative;
+}
+.ruler .lg, .ruler .zero {
+  position: absolute;
+  height: 30px;
+  width: 3px;
+  background-color: #222;
+}
+.ruler .lg:nth-child(1) {
+  left: 120px;
+}
+.ruler .lg:nth-child(2) {
+  left: 240px;
+}
+.ruler .lg:nth-child(3) {
+  left: 360px;
+}
+.ruler .lg:nth-child(4) {
+  left: 480px;
+}
+.ruler .lg:nth-child(5) {
+  left: 600px;
+}
+.ruler .lg:nth-child(6) {
+  left: 720px;
+}
+.ruler .lg:nth-child(7) {
+  left: 840px;
+}
+.ruler .lg:nth-child(8) {
+  left: 960px;
+}
+.ruler .lg:nth-child(9) {
+  left: 1080px;
+}
+.ruler .lg:nth-child(10) {
+  left: 1200px;
+}
+.ruler .lg:nth-child(11) {
+  left: 1320px;
+}/*# sourceMappingURL=style.css.map */

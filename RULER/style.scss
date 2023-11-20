@@ -1,0 +1,47 @@
+$colorDark: #222;
+$colorLight: orange;
+$width: 1200px;
+$height: 100px;
+
+body{
+    background-color: $colorDark;
+}
+// mixin il folosesti pentru a nu repeta un cod, il declari
+// o singura data si cu @include il pui acolo unde ai nevoie
+// cu ajutorul lui @if mixinul decide ce este inclus si unde
+// este inclus
+@mixin border($dir){
+    @if $dir == "all"{
+        border: $height * 0.05 solid darken($colorLight, 15%);
+    }
+    @if $dir == "bottom"{
+        border-bottom: $height * 0.05 solid darken($colorLight, 15%);
+    }
+}    
+
+.ruler{
+    background-color: $colorLight;
+    width: $width;
+    height: $height;
+    border-radius: $height * 0.1;
+    @include border("all");  //transmite valoare 'all' in $dir
+
+    .indicator{
+        height: 0.7 * $height;
+        @include border("bottom");
+        position: relative;
+    }
+
+    .lg, .zero{
+        position: absolute;
+        height: 0.3 * $height;
+        width: 0.03 * $height;
+        background-color: $colorDark;
+    }
+    $step: $width / 10;
+    @for $n from 1 through 11{
+        .lg:nth-child(#{$n}){
+            left: $n * $step;
+        }
+    }
+}
