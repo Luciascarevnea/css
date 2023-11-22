@@ -1,0 +1,38 @@
+
+## CSS FLEX- 2016
+-> te ajuta sa gandesti intr-o singura directie ori 
+orizontala ori pe verticala.
+## CSS native grid a aparut in 2018
+Grid- regim de afisare, care poate fi utilizat simultan in doua directii, adica putem imparti elementele pe verticala si orizontala simultan
+
+ASEMANARI:
+-> Containerul defineste logica de aliniere a itemelor.
+-> Atat flexul cat si gridul au (directia-start, end, spatierea, alinierea, ordinea elementelor"z-index")
+
+DEOSEBIRI:
+-> poti prestabilia un schelet ca intr-un tabel(row, cols, suprafete(un sablon de aranjare a elementelor))
+-> unitate nou factie- (fr 1fr:2fr)
+-> funcii (repeat(...))
+-> suprapunerea elementelor ca in pozitionare(item overlap, z-index)
+...
+
+Display: CSS NATIVE GRID- MODERN TABLE
+
+-> cols/row
+-> container/items
+-> start / center / end / spacing / span / reflection
+-> order
+-> overlap items (z-index)
+-> flexible / smart size / alignment
+-> unit: fr
+-> functions: repeat()
+-> gap: distance
+-> templating + areas
+...
+
+
+
+FLOW--------> H or V (flex)
+------------------------------------
+FLOW--------> H and V (grid)
+

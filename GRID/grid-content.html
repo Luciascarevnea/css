@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS NATIVE GRID EXAMPLE</title>
+    <style>
+        main{
+            border: 5px solid red;
+            height: 80vh;
+            width: 80vw;
+        }
+        main>*{
+            background-color: #BBB;
+            border: 5px solid green;
+            margin: 0;
+        }
+
+
+        /* CSS GRID- marginile nu se mai suprapun
+           browserul le-a imartit in 4 rinduri pentru ca sunt
+           4 elemente
+           a marit latimea randurilor, a creat cate un rand 
+           virtual asemeni unui tabel.
+        */
+
+        main{
+            display: grid;
+            grid-template-columns: 33% 10% 10% auto;
+            grid-template-rows: 2fr 0.5fr 0.5fr 1fr 1fr;
+        }
+        main h1{
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        main p:first-of-type{
+            grid-row-start: 3;
+            grid-row-end: 4;
+
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        main p:nth-of-type(2){
+            grid-row-start: 4;
+
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        main p:nth-of-type(3){
+            grid-row-start: 5;
+
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+
+        main div{
+            background-color: orange;
+            grid-row-start: 2;
+            grid-row-end: 4;
+
+            grid-column-start: 2;
+            grid-column-end: 4;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!--Container-->
+    <main>
+        <!--item-->
+        <div>
+            <a href="">BUY IT!</a>
+        </div>
+        
+        <h1>This is the CSS Grid</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellat impedit nihil est molestias, ipsa recusandae explicabo. Aut, culpa reprehenderit.</p>
+        <p>Totam rerum dignissimos a labore in magnam porro distinctio sit at debitis iusto repudiandae molestias error, voluptatum est impedit? Repudiandae.</p>
+        <p>Voluptates quisquam quam, dolor odio ut recusandae mollitia similique distinctio quis error beatae fuga voluptate natus ipsam deleniti laborum est?</p>
+    </main>
+    
+</body>
+</html>

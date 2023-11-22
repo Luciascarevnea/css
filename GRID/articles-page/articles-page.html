@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles page | CSS GRID</title>
+    <style>
+        body{
+            background-color: #333;
+            color: white;
+        }
+
+        .news{
+            border: 1px solid #666;
+        }
+
+        .news header,
+        .news article{
+            background-color: #555;
+            padding: 1em;
+        }
+
+        /*
+        GRID
+        */
+        .news{
+            height: 100vh;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 6em 1fr;
+        }
+
+        .news header{
+            background-color: #222;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
+        .news article:nth-child(2){
+            order: 2;
+            border: 2px solid #123;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        .news article:nth-child(4){
+            order: 3;
+        }
+
+        @media (max-width: 800px){
+            .news article:nth-child(2){
+                grid-column-start: 1;
+                grid-column-end: 5;
+                order: 0;
+            }
+            .news article:nth-child(3){
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+            .news article:nth-child(4){
+                grid-column-start: 3;
+                grid-column-end: 5;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <section class="news">
+
+        <header>
+            <h1>FRESH NEWS</h1>
+        </header>
+
+        <article>
+            <h2>ARTICLE MAIN</h2>
+        </article>
+        <article>
+            <h2>ARTICLE SECOND</h2>
+        </article>
+        <article>
+            <h2>ARTICLE THIRD</h2>
+        </article>
+
+    </section>
+    
+</body>
+</html>
